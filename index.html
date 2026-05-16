@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shijin Duan | SRE at 2012 Labs</title>
+    <link rel="icon" href="images/favicon/Northeastern_seal.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #0ea5e9, #3b82f6);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="font-bold text-xl tracking-tight text-gray-900 hover:text-brand-600 transition">SD.</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition">About</a>
+                    <a href="#experience" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition">Experience</a>
+                    <a href="#research" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition">Research</a>
+                    <a href="#publications" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition">Publications</a>
+                    <a href="#service" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition">Service</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+            <div class="w-full md:w-2/3 space-y-6 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
+                    Hi, I'm <span class="gradient-text">Shijin Duan</span>
+                </h1>
+                <h2 class="text-xl md:text-2xl text-gray-600 font-medium">
+                    Senior Research Engineer at 2012 Labs<br/>
+                    <span class="text-gray-500 text-lg">Huawei @ Beijing, China</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl leading-relaxed">
+                    I am a senior research engineer at 2012 Labs, Huawei. I received my Ph.D. in Computer Engineering from Northeastern University, where I was advised by
+                    <a href="https://www.xiaolinxu.com/" class="text-brand-600 hover:underline font-medium">Prof. Xiaolin Xu</a>. 
+                    My focus is on AI infrastructure and OS-side optimization, making AI inference services swift, secure, and scalable.
+                </p>
+                
+                <!-- Social Links -->
+                <div class="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
+                    <a href="mailto:duan.s@northeastern.edu" class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 shadow-sm hover:shadow-md hover:border-brand-500 hover:text-brand-600 transition flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=RJ5CUeAAAAAJ" target="_blank" class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 shadow-sm hover:shadow-md hover:border-brand-500 hover:text-brand-600 transition flex items-center gap-2">
+                        <i class="fas fa-graduation-cap"></i> Scholar
+                    </a>
+                    <a href="https://github.com/sjduan" target="_blank" class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 shadow-sm hover:shadow-md hover:border-brand-500 hover:text-brand-600 transition flex items-center gap-2">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/shijin-duan-018b42175/" target="_blank" class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 shadow-sm hover:shadow-md hover:border-brand-500 hover:text-brand-600 transition flex items-center gap-2">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="#" class="px-5 py-2.5 rounded-full bg-gray-900 text-white shadow-sm hover:shadow-md hover:bg-brand-600 transition flex items-center gap-2">
+                        <i class="fas fa-file-pdf"></i> CV
+                    </a>
+                </div>
+            </div>
+            
+            <div class="w-48 h-48 md:w-72 md:h-72 shrink-0">
+                <img src="images/shijin_duan.jpg" alt="Shijin Duan" class="w-full h-full object-cover rounded-full shadow-2xl ring-4 ring-white">
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+                <i class="fas fa-flask text-brand-500 text-xl"></i> Working On
+            </h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 bg-brand-50 text-brand-700 rounded-lg text-sm font-medium border border-brand-100">Memory Management on AI Inference Services</span>
+                <span class="px-4 py-2 bg-brand-50 text-brand-700 rounded-lg text-sm font-medium border border-brand-100">PyPTO</span>
+                <span class="px-4 py-2 bg-brand-50 text-brand-700 rounded-lg text-sm font-medium border border-brand-100">AI Infrastructure</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-20 bg-gray-50 border-y border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">Experience</h3>
+                <p class="text-gray-500 mt-2">Recent roles and research directions.</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 md:grid md:grid-cols-[170px_140px_220px_1fr] md:gap-6">
+                    <p class="text-sm font-semibold text-brand-600 tracking-wide uppercase">2025.08 - Now</p>
+                    <p class="mt-2 md:mt-0 text-lg font-semibold text-gray-900">SRE</p>
+                    <p class="mt-1 md:mt-0 text-gray-700 font-medium">Huawei</p>
+                    <p class="mt-3 md:mt-0 text-gray-600 leading-relaxed">AI Infrastructure and Memory Management on AI-native-OS.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 md:grid md:grid-cols-[170px_140px_220px_1fr] md:gap-6">
+                    <p class="text-sm font-semibold text-brand-600 tracking-wide uppercase">2020.09 - 2025.05</p>
+                    <p class="mt-2 md:mt-0 text-lg font-semibold text-gray-900">Research Assistant</p>
+                    <p class="mt-1 md:mt-0 text-gray-700 font-medium">Northeastern University</p>
+                    <p class="mt-3 md:mt-0 text-gray-600 leading-relaxed">Research on diverse areas, including Vector Symbolic Architectures, Quantum ML, Graph ML, Multi-Party Computation, Hardware Security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlighted Research -->
+    <section id="research" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">Highlighted Research</h3>
+                <p class="text-gray-500 mt-2">Representative projects and selected publications.</p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold text-gray-900">Ultra-Lightweight Binary Vector Symbolic Architecture</h4>
+                            <a href="https://github.com/sjduan/LeHDC" class="text-gray-400 hover:text-gray-900 transition"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            Advanced Binary VSA in machine learning by integrating partial binary neural networks into VSA training. Drastically reduces the vector dimensions required by approximately <strong>99%</strong> while maintaining comparable accuracy. Models are only several kilobytes! Prototypes accelerated on FPGA and MCU. Fostered one patent and an NSF award.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-gray-800">
+                                <strong>[DAC'25]</strong> Holistic Design towards Resource-Stringent Binary Vector Symbolic Architecture.
+                            </div>
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-gray-800">
+                                <strong>[CPAL'25]</strong> Towards Vector Optimization on Low-Dimensional Vector Symbolic Architecture.
+                            </div>
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-gray-800">
+                                <strong>[ASPLOS'24]</strong> MicroVSA: An Ultra-Lightweight VSA-based Classifier Library for Tiny Microcontrollers.
+                            </div>
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-gray-800">
+                                <strong>[DAC'22]</strong> LeHDC: Learning-Based Hyperdimensional Computing Classifier.
+                            </div>
+                            <div class="bg-gray-50 p-3 text-sm text-gray-500 border border-gray-100 rounded-r">
+                                <strong>[DAC'22]</strong> HDLock: Exploiting Privileged Encoding to Protect Hyperdimensional Computing Models against IP Stealing.
+                            </div>
+                            <div class="bg-gray-50 p-3 text-sm text-gray-500 border border-gray-100 rounded-r">
+                                <strong>[tinyML'22]</strong> A Brain-Inspired Low-Dimensional Computing Classifier for Inference on Tiny Devices.
+                            </div>
+                            <div class="bg-gray-50 p-3 text-sm text-gray-500 border border-gray-100 rounded-r">
+                                <strong>[NANOARCH'21]</strong> HDCOG: A Lightweight Hyperdimensional Computing Framework with Feature Extraction.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold text-gray-900">Quantum Machine Learning</h4>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            Studies robust training for quantum neural networks in the noisy intermediate-scale quantum era. Introduces a noise-aware training strategy that adapts to both standard and fatal error conditions, with a low-complexity search method to identify critical failures during optimization. This approach substantially improves robustness while maintaining competitive performance across diverse error scenarios.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-gray-800">
+                                <strong>[DAC'25]</strong> Towards Training Robustness Against Dynamic Errors in Quantum Machine Learning.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold text-gray-900">Graph Structure Representation with Cross-Correlation Autoencoder</h4>
+                            <a href="https://github.com/sjduan/GraphCroc" class="text-gray-400 hover:text-gray-900 transition"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            Focuses on graph structural reconstruction with graph autoencoders (GAEs). Introduced a cross-correlation mechanism to enhance GAE representational capabilities addressing limitations in self-correlation models. Proposed <strong>GraphCroc</strong>, a U-Net-like GAE that ensures robust structural reconstruction through a mirrored encoding-decoding process.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-gray-800">
+                                <strong>[NeurIPS'24]</strong> GraphCroc: Cross-Correlation Autoencoder for Graph Structural Reconstruction.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold text-gray-900">Secure Multi-Party Computation for Deep Learning</h4>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            Advances privacy-preserving machine learning through multi-party computation (MPC). Addresses latency issues in MPC with acceleration methods, including FPGA integration and ReLU approximation. Proposed accelerations on FPGA achieved <strong>25%</strong> reduced communication and <strong>26x</strong> improved energy efficiency compared to existing frameworks.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-gray-800">
+                                <strong>[MICRO'23]</strong> AQ2PNN: Enabling Two-party Privacy-Preserving DNN Inference with Adaptive Quantization.
+                            </div>
+                            <div class="bg-gray-50 p-3 text-sm text-gray-500 border border-gray-100 rounded-r">
+                                <strong>[ArXiv'24]</strong> SSNet: A Lightweight Multi-Party Computation Scheme for Practical Privacy-Preserving Machine Learning Service in the Cloud.
+                            </div>
+                            <div class="bg-gray-50 p-3 text-sm text-gray-500 border border-gray-100 rounded-r">
+                                <strong>[DAC'23]</strong> PASNet: Polynomial Architecture Search Framework for Two-party Computation-based Secure NN Deployment.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               <!-- Project 5 (FPGA crosstalk) -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold text-gray-900">Defense against Crosstalk-Based Side-Channel Attack in FPGA</h4>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            Proposed a defense framework leveraging placement, routing, and obfuscation to mitigate secret leakage on FPGA components through crosstalk side channels. Reduces leakage by <strong>138 times</strong> with minimal latency and area overhead. Won the <strong>ACM TODAES Rookie Author of the Year (RAY) Award</strong>.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-gray-800">
+                                <span class="text-red-600 font-bold mr-2"><i class="fas fa-trophy"></i> RAY Award</span>
+                                <strong>[TODAES'21]</strong> FPGAPRO: A Defense Framework Against Crosstalk-Induced Secret Leakage in FPGA.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Publications Section -->
+    <section id="publications" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-gray-900 mb-8">Other Publications</h3>
+            <ul class="space-y-4">
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[ArXiv'25]</strong> ConQuER: Modular Architectures for Control and Bias Mitigation in IQP Quantum Generative Models.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[ICLRW'25]</strong> ProDiF: Protecting Domain-Invariant Features to Secure Pre-Trained Models Against Extraction.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[TODAES'24]</strong> Watch Out for the Inherent Vulnerabilities in Developing Multi-tenant Cloud-FPGA: Communication Protocols.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[tinyML'24]</strong> Scheduled Knowledge Acquisition on Lightweight Vector Symbolic Architectures for Brain-Computer Interfaces.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[ICCAD'23]</strong> MirrorNet: A TEE-Friendly Framework for Secure On-device DNN Inference.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[INFOCOM WKSHPS'23]</strong> Achieving Certified Robustness for Brain-Inspired Low-Dimensional Computing Classifiers.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[tinyML'23]</strong> MetaLDC: Meta Learning of Low-Dimensional Computing Classifiers for Fast On-Device Adaption.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[ICCV'23]</strong> VertexSerum: Poisoning Graph Neural Networks for Link Inference.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[ArXiv'23]</strong> RRNet: Towards ReLU-Reduced Neural Network for Two-party Computation Based Private Inference.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[ICFPT'22]</strong> A Cautionary Note on Building Multi-tenant Cloud-FPGA as a Secure Infrastructure.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[FPGA'22]</strong> An Integrity Checking Framework for AXI Protocol in Multi-tenant FPGA.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[FCCM'22]</strong> NNReArch: A Tensor Program Scheduling Framework Against Neural Network Architecture Reverse Engineering.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[NANOARCH'21]</strong> Deep Neural Network Security from a Hardware Perspective.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="mt-1 text-gray-300"><i class="fas fa-file-lines"></i></span>
+                    <p class="text-gray-700"><strong>[ISVLSI'21]</strong> A Survey of Recent Attacks and Mitigation on FPGA Systems.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Service and Teaching -->
+    <section id="service" class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                    <i class="fas fa-hands-helping text-brand-500"></i> Professional Service
+                </h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Invited Paper Review</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            NeurIPS(2026), ICML(2026), CVPR(2026), TDSC(2026), PeerJ(2025), JAIR(2024-2025), TIFS(2024), PEVA(2024), TCE(2024), TETC(2023), IEEE-SJ(2021-2023), DAC(2023), HOST(2023), Integration(2022), TOMPECS(2021)
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Invited Talks</h4>
+                        <ul class="text-sm text-gray-600 space-y-2 list-disc list-inside">
+                            <li>Vector Symbolic Architecture as an Efficient Solution for Classification Tasks. @UMassD (March 2024)</li>
+                            <li>Practical Topics for Embedding Machine Learning on Quantum Platforms. @UMassD (December 2024)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                    <i class="fas fa-chalkboard-teacher text-brand-500"></i> Teaching Assistance
+                </h3>
+                <ul class="space-y-4">
+                    <li class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                        <h4 class="font-semibold text-gray-900">EECE 2322 / 2323</h4>
+                        <p class="text-sm text-gray-500">Fundamentals of Digital Design and Computer Organization</p>
+                        <p class="text-xs text-brand-600 mt-2 font-medium">Spring 2022, Fall 2020, Fall 2022</p>
+                    </li>
+                    <li class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                        <h4 class="font-semibold text-gray-900">EECE 2160</h4>
+                        <p class="text-sm text-gray-500">Embedded Design: Enabling Robotics</p>
+                        <p class="text-xs text-brand-600 mt-2 font-medium">Spring 2021</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500 flex flex-col items-center">
+            <p>&copy; Shijin Duan. Designed and organized with a fresh look.</p>
+            
+            <div class="mt-4 opacity-50 hover:opacity-100 transition">
+                <!-- Keep visitor tracker -->
+                <a href="https://clustrmaps.com/site/1bxp5" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=9f4TRxKQByE1bmxKKayZk_lqbMoOr9mEcH-vN-S0J4Q&cl=ffffff" class="h-6 object-contain" /></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
